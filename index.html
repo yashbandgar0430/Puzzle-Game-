@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliding Puzzle Game</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a href="#">Puzzle Game</a>
+  </div>
+  <ul class="navbar-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">How to Play</a></li>
+    <li><a href="#">Leaderboard</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+  <div class="container">
+    <header>
+      <h1>Sliding Puzzle Game</h1>
+    </header>
+
+    <section class="controls">
+      <label for="imageSelect">Choose an image:</label>
+      <select id="imageSelect">
+        <option value="">Select an image</option>
+        <option value="chotabheemgang.jpg">Chhotta Bheem </option>
+        <option value="mickeymouse2.jpg"> Mickey Mouse </option>
+        <option value="DoremonGroup.jpg"> Doremon </option>
+        <option value="Avengers.jpg"> Avengers </option>
+        <option value="MoneyHeist.jpg"> Money Heist</option>
+      </select>
+      <button id="startGameBtn">Start Game</button>
+    </section>
+
+    <section class="game">
+      <div class="reference">
+        <h2>Reference Image</h2>
+        <div id="referenceContainer" class="image-container"></div>
+      </div>
+      <div class="puzzle">
+        <h2>Puzzle</h2>
+        <div id="puzzleContainer" class="image-container"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('images/bg.jpg');
+}
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space out items */
+  align-items: center; /* Center items vertically */
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  position: fixed; /* Makes navbar fixed at the top */
+  top: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensures it stays above other elements */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  flex: 1; /* Makes the brand take up necessary space */
+}
+
+.navbar-brand a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand a:hover {
+  transform: scale(1.1);
+}
+
+.navbar-links {
+  display: flex; /* Aligns links in a row */
+  gap: 20px; /* Adds horizontal spacing between links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: inline-block; /* Ensures list items stay horizontal */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px; /* Adds space around links */
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: #ffe58f;
+}
+
+/* Sliding underline effect */
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #ffe58f;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  .navbar-links {
+    flex-direction: column; /* Stacks links vertically */
+    align-items: flex-start; /* Aligns links to the left */
+    gap: 10px;
+    width: 100%;
+  }
+}
+
+
+/* Container for the game */
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: #000000c7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #02ccff;
+  font-weight: bold;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls label {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.controls select {
+  padding: 5px 10px;
+  border: 1px solid #f4f4f4f2;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background-color: #005fa3;
+}
+
+/* Game Section */
+.game {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Reference and Puzzle Containers */
+.image-container {
+  width: 300px;
+  height: 300px;
+  border: 2px dashed #007acc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #dfdfdf31;
+}
+
+.reference h2,
+.puzzle h2 {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #007acc;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Puzzle Pieces */
+.puzzle-piece {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.puzzle-piece:hover {
+  transform: scale(1.05);
+}
